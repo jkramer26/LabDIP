@@ -9,21 +9,26 @@ package dip.lab2;
  * @author your name goes here
  */
 public class FoodServiceTipCalculator {
-    //might want to change this because you might want to alter this sometimes to be a different value
+    //might want to change this from final because you might want to alter this sometimes to be a different value
     //violates non-rigid or portable best practice
-    private static final double MIN_BILL = 0.00;
-    private static final String BILL_ENTRY_ERR =
+    private double MIN_BILL = 0.00;
+    //this should also not be final because you may want the message to change  
+    private String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
-
+    //these rates should also not be final because the rates for each may want to be altered
+    private double GOOD_RATE = 0.20;
+    private double FAIR_RATE = 0.15;
+    private double POOR_RATE = 0.10;
     private double bill;
+    
+    //this is another class called ServiceQuality
     public enum ServiceQuality {
         GOOD, FAIR, POOR
     }
+    //this is a composition 
     private ServiceQuality serviceQuality;
-
+    
+    //constructor that validates input by calling methods 
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
         this.setServiceRating(q);
         this.setBill(billAmt);
@@ -47,8 +52,9 @@ public class FoodServiceTipCalculator {
 
         return tip;
     }
-
-    public final void setBill(double billAmt) {
+    
+    //this shouldn't be final. Bill amount will vary
+    public void setBill(double billAmt) {
         if(billAmt < MIN_BILL) {
             throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }

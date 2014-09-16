@@ -10,7 +10,7 @@ package dip.lab2;
  *
  * @author jkramer26
  */
-public class TypeSafe {
+public class ZTypeSafe {
     
     
     //this is a constant

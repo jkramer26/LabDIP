@@ -10,7 +10,6 @@ package dip.lab2;
  *
  * @author jkramer26
  */
-public enum NewEnum {
-    //these are not strings they are consantats. Enums are constants
-    RED, BLUE
+public class TipCalculatorManager {
+    
 }

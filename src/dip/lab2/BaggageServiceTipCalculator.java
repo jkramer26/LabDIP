@@ -9,17 +9,22 @@ package dip.lab2;
  * @author your name goes here
  */
 public class BaggageServiceTipCalculator {
-    private static final double MIN_BILL = 0.00;
-    private static final double MAX_BILL = 100.00;
-    private static final String BILL_ENTRY_ERR =
+    //max and min shouldn't be final. Values may want to be adjusted
+    private double MIN_BILL = 0.00;
+    private double MAX_BILL = 100.00;
+    //shouldn't be final as message may want to altered
+    private String BILL_ENTRY_ERR =
             "Error: bill must be between " + MIN_BILL + " and "
             + MAX_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
+    //this shouldn't be final as well because rates may change
+    private double GOOD_RATE = 0.20;
+    private double FAIR_RATE = 0.15;
+    private double POOR_RATE = 0.10;
 
     private double baseTipPerBag;
     private int bagCount;
+    
+    //another class
     public enum ServiceQuality {
         GOOD, FAIR, POOR
     }
@@ -63,8 +68,9 @@ public class BaggageServiceTipCalculator {
     public int getBagCount() {
         return bagCount;
     }
-
-    public final void setBagCount(int bagCount) {
+    
+    //may want to change bag count value shouldn't be final
+    public void setBagCount(int bagCount) {
         if(bagCount < 0) {
             throw new IllegalArgumentException(
                     "bag count must be greater than or equal to zero");
