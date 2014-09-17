@@ -1,12 +1,12 @@
 
 package dip.lab1.student.solution1;
 
-
+//low-level class that implements the employee abstraction
 public class SalariedEmployee implements Employee {
     
     private double annualSalary;        //the annual salary an employee has
     private double annualBonus;         //the bonus amount an employee could have
-    private double employeeAnnualPay;   //variable that stores how much salariedEMployee earns in a year
+    private double employeeAnnualWage;   //variable that stores how much salariedEMployee earns in a year
     
     //constructor that passes in how annual salary and bonus for a salaried employee
     public SalariedEmployee(double annualSalary, double annualBonus) {
@@ -16,10 +16,10 @@ public class SalariedEmployee implements Employee {
     
     //method to calculate and return how much a salaried employee earns in a year
     @Override
-    public double getPay() {
-        employeeAnnualPay = (annualSalary + annualBonus);
+    public double getWage() {
+        employeeAnnualWage = (annualSalary + annualBonus);
         
-        return employeeAnnualPay;
+        return employeeAnnualWage;
     }
     
     //getters and setters for properties
@@ -40,7 +40,7 @@ public class SalariedEmployee implements Employee {
     }
 
     public double getEmployeeAnnualPay() {
-        return employeeAnnualPay;
+        return employeeAnnualWage;
     }
 
     
