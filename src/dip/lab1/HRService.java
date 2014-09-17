@@ -20,6 +20,9 @@ public class HRService {
     /**
      * Alternatively to the above, we could use an enum. Does this improve
      * type safety?
+     * 
+     * If I recall correctly enums shouldn't be in the high level class. 
+     * I can't exactly recall why they should not be... ask.
      */
     public enum WageType {
         SALARIED,
@@ -44,7 +47,8 @@ public class HRService {
         double annualCompensation = 0;
 
         // One example of using fragile if logic to determine employee type.
-        // If only we could use polymorphism instead!
+        // If only we could use polymorphism instead! By using enums and putting
+        //  it within another class called EmployeeType
         if(employeeType.equals(HOURLY_TYPE)) {
             annualCompensation = e.getAnnualWages();
 
@@ -65,6 +69,10 @@ public class HRService {
      * Very rigid and fragile!
      * @param e - an employee object (not truly polymorphic!)
      * @return the annual compensation for supported employee types
+     * 
+     * 
+     * Use method within low-level classes to prevent this from happening. 
+     * 
      */
     public double getAnnualCompensationForEmployee(Employee e) {
         double annualCompensation = 0;

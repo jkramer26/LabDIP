@@ -10,7 +10,7 @@ public class TipCalculatorManager {
     
     //composition has-a relationship
     //way to implement abstract class
-    //use this abstraction so you can have any kind of source
+    //is an instance variable. 
     private TipCalculatorSource source;
     
     //constructor that passes in tipcalculatorSource object

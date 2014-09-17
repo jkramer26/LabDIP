@@ -5,10 +5,12 @@ package dip.lab1;
  * Find and fix all encapsulation, DIP and best practice problems learned
  * so far.
  *
- * @author your name goes here
+ * @Jessica Kramer
  */
 public class Employee {
     // You gotta question if these are appropriate for ALL employees?
+    // No they are not. All of these should be in their specific subclasses. 
+    // This is applicable to all of the properties methods as well.
     private double hourlyRate;
     private double totalHrsForYear;
     private double annualSalary;
@@ -16,7 +18,7 @@ public class Employee {
 
     /**
      * Returns annual wages for hourly workers. Is this polymorphic?
-     * Could it be? Does it belong here?
+     * Could it be? Does it belong here? No and no.
      *
      * @return annual wages for hourly workers using the formula
      * annualWages = hourlyRate * totalHrsForYear
@@ -27,7 +29,7 @@ public class Employee {
 
     /**
      * Returns annual bonus for salaried workers. Is this polymorphic?
-     * Could it be? Does it belong here?
+     * Could it be? Does it belong here? No and no.
      *
      * @return annual bonus or zero if none.
      */
