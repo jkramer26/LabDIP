@@ -16,16 +16,29 @@ import javax.swing.JOptionPane;
  *    high-level class. Did it work? Are the low-level instances
  *    interchangeable? The DIP requires this.
  * 
- * @author your name goes here
+ * @Jessica Kramer
  */
 public class Startup {
     public static enum ServiceQuality {
            GOOD, FAIR, POOR
     };
+    
  
     public static void main(String[] args) {
         
+        //creating an object of the foodservce... class and passing in values
+        //cant use higher level class for this... not positive why
+        FoodServiceTipCalculator foodService = new FoodServiceTipCalculator(FoodServiceTipCalculator.ServiceQuality.FAIR, 35);
+        //cerating an object of the baggageservice... class and passing in values
+        BaggageServiceTipCalculator baggageService = new BaggageServiceTipCalculator(BaggageServiceTipCalculator.ServiceQuality.GOOD, 5);
         
+        //creating an object of the tipcalculator manager class and passing in foodService object
+        TipCalculatorManager manage = new TipCalculatorManager(foodService);
+        manage.doTipCalculation();
+        
+        
+        TipCalculatorManager manage2 = new TipCalculatorManager(baggageService);
+        manage2.doTipCalculation();
     }
 
 }

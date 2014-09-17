@@ -6,9 +6,10 @@ package dip.lab2;
  *
  * Any other best practice violations? Fix them too.
  *
- * @author your name goes here
+ * @Jessica Kramer
  */
-public class BaggageServiceTipCalculator {
+public class BaggageServiceTipCalculator implements TipCalculatorSource {
+    //when should methods or properties be final?
     //max and min shouldn't be final. Values may want to be adjusted
     private double MIN_BILL = 0.00;
     private double MAX_BILL = 100.00;
@@ -37,8 +38,9 @@ public class BaggageServiceTipCalculator {
         baseTipPerBag = 1.00; // set default value
     }
     
-    //method names should be the same. So rename this
-    public double getTipForBaggeHandler() {
+    //method name should be generic 
+    @Override
+    public double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -89,5 +91,11 @@ public class BaggageServiceTipCalculator {
         }
         this.baseTipPerBag = baseTipPerBag;
     }
-
+    
+    //for testing the class
+    public static void main(String[] args) {
+        BaggageServiceTipCalculator test = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 5);
+        
+        System.out.println("Tip for this class: " + test.getTip());
+    }
 }

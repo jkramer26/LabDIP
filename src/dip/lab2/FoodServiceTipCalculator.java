@@ -6,9 +6,9 @@ package dip.lab2;
  *
  * Any other best practice violations? Fix them too.
  *
- * @author your name goes here
+ * @Jessica Kramer
  */
-public class FoodServiceTipCalculator {
+public class FoodServiceTipCalculator implements TipCalculatorSource {
     //might want to change this from final because you might want to alter this sometimes to be a different value
     //violates non-rigid or portable best practice
     private double MIN_BILL = 0.00;
@@ -35,6 +35,7 @@ public class FoodServiceTipCalculator {
     }
     
     //have name redone so it matches other method name
+    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -69,5 +70,13 @@ public class FoodServiceTipCalculator {
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
-
+    
+    //for testing the class
+    public static void main(String[] args) {
+        FoodServiceTipCalculator test = new FoodServiceTipCalculator(ServiceQuality.FAIR, 35);
+        
+        System.out.println("Tip for this class: " + test.getTip());
+        
+        
+    }
 }

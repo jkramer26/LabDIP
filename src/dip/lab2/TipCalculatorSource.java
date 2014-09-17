@@ -3,6 +3,6 @@
 package dip.lab2;
 
 
-public class TipCalculatorSource {
-    
+public interface TipCalculatorSource {
+    public abstract double getTip();
 }
