@@ -21,10 +21,6 @@ public class FoodServiceTipCalculator implements TipCalculatorSource {
     private double POOR_RATE = 0.10;
     private double bill;
     
-    //this is another class called ServiceQuality
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
     //this is a composition 
     private ServiceQuality serviceQuality;
     
