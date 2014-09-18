@@ -11,7 +11,7 @@ public class Startup {
 
     public static void main(String[] args) {
         /*
-         * We'll just use this class for testing our ccde.
+         * We'll just use this class for testing our code.
          * We'll provide input and get some output...
          */
 

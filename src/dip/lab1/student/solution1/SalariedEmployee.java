@@ -8,10 +8,10 @@ public class SalariedEmployee implements Employee {
     private double annualBonus;         //the bonus amount an employee could have
     private double employeeAnnualWage;   //variable that stores how much salariedEMployee earns in a year
     
-    //constructor that passes in how annual salary and bonus for a salaried employee
+    //constructor that passes in how annual salary and bonus for a salaried employee & validate input
     public SalariedEmployee(double annualSalary, double annualBonus) {
-        this.annualSalary = annualSalary;
-        this.annualBonus = annualBonus;
+        setAnnualSalary(annualSalary);
+        setAnnualBonus(annualBonus);
     }
     
     //method to calculate and return how much a salaried employee earns in a year
@@ -28,6 +28,10 @@ public class SalariedEmployee implements Employee {
     }
 
     public void setAnnualSalary(double annualSalary) {
+        if(annualSalary < 0) {
+            throw new IllegalArgumentException();
+        }
+        
         this.annualSalary = annualSalary;
     }
 
@@ -36,6 +40,10 @@ public class SalariedEmployee implements Employee {
     }
 
     public void setAnnualBonus(double annualBonus) {
+        if(annualBonus < 0) {
+            throw new IllegalArgumentException();
+        }
+        
         this.annualBonus = annualBonus;
     }
 

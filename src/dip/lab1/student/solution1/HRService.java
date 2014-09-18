@@ -12,7 +12,7 @@ public class HRService {
     }
     
     //method to get an employees annual wage
-    public double getWage() {
+    public double getEmployeeWage() {
         return employee.getWage();
     }
     

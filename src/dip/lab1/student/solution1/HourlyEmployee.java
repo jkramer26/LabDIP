@@ -8,10 +8,10 @@ public class HourlyEmployee implements Employee {
     private double totalHrsForYear;     //total number of hours employee worked in a year
     private double employeeAnnualWage;   //variable to store the pay an hourly employee earns in a year
     
-    //constructor that passes in hourly rate and hours worked for a year
+    //constructor that passes in hourly rate and hours worked for a year & validate input
     public HourlyEmployee(double hourlyRate, double totalHrsForYear) {
-        this.hourlyRate = hourlyRate;
-        this.totalHrsForYear = totalHrsForYear;
+        setHourlyRate(hourlyRate);
+        setTotalHrsForYear(totalHrsForYear);
     }
     
     //method to get the pay for an hourly employee
@@ -27,15 +27,21 @@ public class HourlyEmployee implements Employee {
         return hourlyRate;
     }
 
-    public void setHourlyRate(double hourlyRate) {    
+    public final void setHourlyRate(double hourlyRate) {
+        if(hourlyRate < 0 || hourlyRate > 500) {
+            throw new IllegalArgumentException();
+        }
         this.hourlyRate = hourlyRate;
     }
 
-    public double getTotalHrsForYear() {
+    public final double getTotalHrsForYear() {
         return totalHrsForYear;
     }
 
-    public void setTotalHrsForYear(double totalHrsForYear) {
+    public final void setTotalHrsForYear(double totalHrsForYear) {
+        if(totalHrsForYear < 0 || totalHrsForYear > 5000) {
+            throw new IllegalArgumentException();
+        }
         this.totalHrsForYear = totalHrsForYear;
     }
 
