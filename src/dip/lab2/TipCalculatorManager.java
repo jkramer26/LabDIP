@@ -19,12 +19,15 @@ public class TipCalculatorManager {
     }
     
     //method that grabs the calculated tip and then outputs it
-    public void doTipCalculation() {
-        System.out.println("The tip is: " + source.getTip());
+    //have names be a bit more specific
+    public double getCalculatedTip() {
+        return source.getTip();
     }
     
     //getter and setter
     //not exactly sure why I should have these. 
+    //should have so you can alter the source in a program like a gui
+    //Ex. If you have a baggae you can change it to a food
     public TipCalculatorSource getSource() {
         return source;
     }

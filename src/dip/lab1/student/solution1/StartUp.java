@@ -32,7 +32,7 @@ public class StartUp {
             manage = new HRService(employees[i]);
             System.out.println("");
             System.out.println("Employee " + (i+1) + " compensation:" +
-            nf.format(manage.getEmployeeWage()));
+            nf.format(manage.getEmployeeAnnualWage()));
             
             //System.out.println("wage:" + manage.getEmployeeWage());
         }

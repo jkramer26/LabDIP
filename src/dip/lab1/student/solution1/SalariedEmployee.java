@@ -16,7 +16,8 @@ public class SalariedEmployee implements Employee {
     
     //method to calculate and return how much a salaried employee earns in a year
     @Override
-    public double getWage() {
+    //could really just return calculation like return annualSalary + annualBonus
+    public double getAnnualWages() {
         employeeAnnualWage = (annualSalary + annualBonus);
         
         return employeeAnnualWage;

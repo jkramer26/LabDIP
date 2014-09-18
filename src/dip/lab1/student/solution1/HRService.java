@@ -4,7 +4,8 @@ package dip.lab1.student.solution1;
 
 public class HRService {
     //create an instance variable of the abstraction class, Employee (Has-a relationship)
-    Employee employee;
+    //be sure to have variables be private
+    private Employee employee;
     
     //constructor
     public HRService(Employee employee) {
@@ -12,8 +13,10 @@ public class HRService {
     }
     
     //method to get an employees annual wage
-    public double getEmployeeWage() {
-        return employee.getWage();
+    //this should be getEmployeeAnnualWage instead of EmployeeWage
+    //it is more specific and people will know what it is then
+    public double getEmployeeAnnualWage() {
+        return employee.getAnnualWages();
     }
     
     //getter and setters...ask why these are needed

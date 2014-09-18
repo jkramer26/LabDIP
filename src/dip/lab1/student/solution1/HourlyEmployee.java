@@ -6,7 +6,8 @@ public class HourlyEmployee implements Employee {
     
     private double hourlyRate;          //the hourly rate an employee earns
     private double totalHrsForYear;     //total number of hours employee worked in a year
-    private double employeeAnnualWage;   //variable to store the pay an hourly employee earns in a year
+    private double employeeAnnualWage;   //variable to store the pay an hourly employee earns in a year 
+                                        //don't really need this last variable. could just return calc
     
     //constructor that passes in hourly rate and hours worked for a year & validates input
     public HourlyEmployee(double hourlyRate, double totalHrsForYear) {
@@ -16,7 +17,8 @@ public class HourlyEmployee implements Employee {
     
     //method to get the pay for an hourly employee
     @Override
-    public double getWage() {
+    //could really just return calculation like return hourlyRate * totalHrsForYEar
+    public double getAnnualWages() {
         employeeAnnualWage = (hourlyRate * totalHrsForYear);
         
         return employeeAnnualWage;

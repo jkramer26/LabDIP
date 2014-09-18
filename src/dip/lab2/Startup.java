@@ -31,11 +31,11 @@ public class Startup {
         
         //creating an object of the tipcalculator manager class and passing in foodService object
         TipCalculatorManager manage = new TipCalculatorManager(foodService);
-        manage.doTipCalculation();
-        
+        double amt = manage.getCalculatedTip();
+        System.out.println("This tip is: " + amt);
         
         TipCalculatorManager manage2 = new TipCalculatorManager(baggageService);
-        manage2.doTipCalculation();
+        manage2.getCalculatedTip();
     }
 
 }
