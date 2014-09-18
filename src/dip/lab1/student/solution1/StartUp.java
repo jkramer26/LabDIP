@@ -28,15 +28,20 @@ public class StartUp {
         // Test input/output by looping over collection in a way that
         // doesn't break if we add/subtract employees from array
         for(int i=0; i < employees.length; i++) {
-            //test System.out.println(employees[i]);
             //intialize the manage variable with an employee
             manage = new HRService(employees[i]);
             System.out.println("");
             System.out.println("Employee " + (i+1) + " compensation:" +
-            //System.out.println("wage:" + manage.getEmployeeWage());
             nf.format(manage.getEmployeeWage()));
+            
+            //System.out.println("wage:" + manage.getEmployeeWage());
         }
         
+        
+        
+        
+        
+        //Below code is not flexible and should not be used
         //Outputting the annual wages of an hourly & salaried employee
         //could output this in actual money format
         //System.out.println("Hourly employee's annual wage: " + manage.getEmployeeWage());

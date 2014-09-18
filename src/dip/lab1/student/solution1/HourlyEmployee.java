@@ -8,7 +8,7 @@ public class HourlyEmployee implements Employee {
     private double totalHrsForYear;     //total number of hours employee worked in a year
     private double employeeAnnualWage;   //variable to store the pay an hourly employee earns in a year
     
-    //constructor that passes in hourly rate and hours worked for a year & validate input
+    //constructor that passes in hourly rate and hours worked for a year & validates input
     public HourlyEmployee(double hourlyRate, double totalHrsForYear) {
         setHourlyRate(hourlyRate);
         setTotalHrsForYear(totalHrsForYear);
@@ -44,7 +44,8 @@ public class HourlyEmployee implements Employee {
         }
         this.totalHrsForYear = totalHrsForYear;
     }
-
+    
+    //only want getter for this since you want to calculate the wage
     public double getEmployeeAnnualWage() {
         return employeeAnnualWage;
     }

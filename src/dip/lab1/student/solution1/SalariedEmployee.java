@@ -8,7 +8,7 @@ public class SalariedEmployee implements Employee {
     private double annualBonus;         //the bonus amount an employee could have
     private double employeeAnnualWage;   //variable that stores how much salariedEMployee earns in a year
     
-    //constructor that passes in how annual salary and bonus for a salaried employee & validate input
+    //constructor that passes in how annual salary and bonus for a salaried employee & validates input
     public SalariedEmployee(double annualSalary, double annualBonus) {
         setAnnualSalary(annualSalary);
         setAnnualBonus(annualBonus);
@@ -46,8 +46,9 @@ public class SalariedEmployee implements Employee {
         
         this.annualBonus = annualBonus;
     }
-
-    public double getEmployeeAnnualPay() {
+    
+    //only want getter for this since you want to calculate the wage
+    public double getEmployeeAnnualWage() {
         return employeeAnnualWage;
     }
 
