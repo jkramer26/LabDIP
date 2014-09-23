@@ -29,18 +29,18 @@ public class HourlyEmployee implements Employee {
         return hourlyRate;
     }
 
-    public final void setHourlyRate(double hourlyRate) {
+    public void setHourlyRate(double hourlyRate) {
         if(hourlyRate < 0 || hourlyRate > 500) {
             throw new IllegalArgumentException();
         }
         this.hourlyRate = hourlyRate;
     }
 
-    public final double getTotalHrsForYear() {
+    public double getTotalHrsForYear() {
         return totalHrsForYear;
     }
 
-    public final void setTotalHrsForYear(double totalHrsForYear) {
+    public void setTotalHrsForYear(double totalHrsForYear) {
         if(totalHrsForYear < 0 || totalHrsForYear > 5000) {
             throw new IllegalArgumentException();
         }
